@@ -1,0 +1,59 @@
+Türkiye Coğrafyası
+
+### Genel Bilgiler
+
+Türkiye, 783.356 km² yüzölçümüne sahip olup hem Avrupa hem de Asya kıtasında toprakları bulunan bir ülkedir. Ülkenin %97'si Asya kıtasında (Anadolu), %3'ü ise Avrupa kıtasında (Trakya) yer almaktadır. Türkiye, kuzeyde Karadeniz, batıda Ege Denizi, güneyde Akdeniz ile çevrilidir.
+
+### Coğrafi Bölgeler
+
+Türkiye 7 coğrafi bölgeye ayrılmıştır:
+
+1. **Marmara Bölgesi**: Türkiye'nin en kalabalık bölgesidir. İstanbul, Bursa, Kocaeli gibi sanayi şehirlerini barındırır. Marmara Denizi bölgenin ortasında yer alır.
+
+2. **Ege Bölgesi**: Batıda yer alır. İzmir, Denizli, Muğla gibi şehirler bu bölgededir. Zeytincilik ve turizm önemli ekonomik faaliyetlerdir. Büyük Menderes ve Gediz nehirleri bu bölgede akar.
+
+3. **Akdeniz Bölgesi**: Güneyde yer alır. Antalya, Mersin, Adana başlıca şehirleridir. Toros Dağları bölgenin kuzeyini çevreler. Akdeniz iklimi hâkimdir; yazlar sıcak ve kurak, kışlar ılık ve yağışlıdır. Narenciye üretiminin merkezi olan Çukurova Ovası bu bölgededir.
+
+4. **İç Anadolu Bölgesi**: Türkiye'nin ortasında yer alır. Başkent Ankara bu bölgededir. Karasal iklim hâkimdir. Tuz Gölü, Türkiye'nin ikinci büyük gölüdür ve bu bölgede bulunur. Kızılırmak, Türkiye'nin en uzun nehridir ve bu bölgeden geçer.
+
+5. **Karadeniz Bölgesi**: Kuzeyde yer alır. Trabzon, Samsun, Rize başlıca şehirleridir. Bol yağış alır ve yeşil bitki örtüsüne sahiptir. Çay ve fındık üretiminin merkezi olan bu bölge, Kaçkar Dağları ile de bilinir.
+
+6. **Doğu Anadolu Bölgesi**: Türkiye'nin en yüksek ve en soğuk bölgesidir. Ağrı Dağı (5.137 m), Türkiye'nin en yüksek noktasıdır ve bu bölgede bulunur. Van Gölü, Türkiye'nin en büyük gölüdür. Fırat ve Dicle nehirleri bu bölgeden doğar.
+
+7. **Güneydoğu Anadolu Bölgesi**: Güneydoğuda yer alır. GAP (Güneydoğu Anadolu Projesi) bu bölgede hayata geçirilmiştir. Şanlıurfa, Gaziantep, Diyarbakır önemli şehirleridir.
+
+### Dağlar
+
+Türkiye, dağlık bir ülkedir. Ortalama yükseltisi 1.132 metredir. Önemli dağ sıraları:
+
+- **Kuzey Anadolu Dağları**: Karadeniz kıyısı boyunca uzanır. Kaçkar Dağları (3.937 m) en yüksek noktasıdır.
+- **Toros Dağları**: Akdeniz kıyısı boyunca uzanır. Batı, Orta ve Doğu Toroslar olarak üçe ayrılır.
+- **Ağrı Dağı**: 5.137 metre ile Türkiye'nin en yüksek dağıdır. Doğu Anadolu'da yer alır.
+- **Uludağ**: 2.543 metre yüksekliğinde olup Bursa'da yer alır. Kış sporları merkezidir.
+- **Erciyes Dağı**: 3.917 metre yüksekliğinde olup Kayseri'de yer alır.
+
+### Nehirler
+
+Türkiye'nin başlıca nehirleri:
+
+- **Kızılırmak**: 1.355 km ile Türkiye'nin en uzun nehridir. Karadeniz'e dökülür.
+- **Fırat Nehri**: Türkiye'den doğar, Suriye ve Irak üzerinden Basra Körfezi'ne ulaşır. Türkiye sınırları içinde 1.263 km uzunluğundadır.
+- **Dicle Nehri**: Doğu Anadolu'dan doğar ve Irak'a geçer.
+- **Sakarya Nehri**: 824 km uzunluğundadır ve Karadeniz'e dökülür.
+- **Büyük Menderes**: Ege Denizi'ne dökülen önemli bir nehirdir.
+
+### İklim
+
+Türkiye'de dört ana iklim tipi görülür:
+
+1. **Karadeniz İklimi**: Her mevsim yağışlı, yazlar serin, kışlar ılık.
+2. **Akdeniz İklimi**: Yazlar sıcak ve kurak, kışlar ılık ve yağışlı.
+3. **Karasal İklim**: Yazlar sıcak ve kurak, kışlar soğuk ve kar yağışlı.
+4. **Yarı Kurak İklim**: İç Anadolu'nun doğusu ve Güneydoğu Anadolu'da görülür.
+
+### Göller
+
+- **Van Gölü**: 3.713 km² ile Türkiye'nin en büyük gölüdür. Sodalı bir göldür.
+- **Tuz Gölü**: İç Anadolu'da yer alan, Türkiye'nin ikinci büyük gölüdür. Tuz üretim merkezidir.
+- **Beyşehir Gölü**: Türkiye'nin en büyük tatlı su gölüdür.
+- **Burdur Gölü**: Tektonik bir göl olup Burdur'da yer alır.

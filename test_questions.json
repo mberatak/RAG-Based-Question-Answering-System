@@ -1,0 +1,52 @@
+[
+  {
+    "soru": "Türkiye'nin başkenti neresidir?",
+    "beklenen_cevap": "Ankara",
+    "ilgili_dosya": "turkiye_sehirleri.txt"
+  },
+  {
+    "soru": "İstanbul hangi yılda fethedilmiştir?",
+    "beklenen_cevap": "1453",
+    "ilgili_dosya": "turkiye_tarihi.txt"
+  },
+  {
+    "soru": "Türkiye'nin en yüksek dağı hangisidir ve yüksekliği nedir?",
+    "beklenen_cevap": "Ağrı Dağı, 5.137 metre",
+    "ilgili_dosya": "turkiye_cografyasi.txt"
+  },
+  {
+    "soru": "Türkiye Cumhuriyeti ne zaman ilan edilmiştir?",
+    "beklenen_cevap": "29 Ekim 1923",
+    "ilgili_dosya": "turkiye_tarihi.txt"
+  },
+  {
+    "soru": "Türkiye'nin en uzun nehri hangisidir?",
+    "beklenen_cevap": "Kızılırmak",
+    "ilgili_dosya": "turkiye_cografyasi.txt"
+  },
+  {
+    "soru": "Osmanlı İmparatorluğu'nun ilk başkenti neresidir?",
+    "beklenen_cevap": "Bursa",
+    "ilgili_dosya": "turkiye_sehirleri.txt"
+  },
+  {
+    "soru": "Türkiye'nin en büyük gölü hangisidir?",
+    "beklenen_cevap": "Van Gölü",
+    "ilgili_dosya": "turkiye_cografyasi.txt"
+  },
+  {
+    "soru": "Kanuni Sultan Süleyman hangi dönemde hüküm sürmüştür?",
+    "beklenen_cevap": "1520-1566",
+    "ilgili_dosya": "turkiye_tarihi.txt"
+  },
+  {
+    "soru": "İzmir antik çağda hangi isimle bilinirdi?",
+    "beklenen_cevap": "Smyrna",
+    "ilgili_dosya": "turkiye_sehirleri.txt"
+  },
+  {
+    "soru": "Türkiye kaç coğrafi bölgeye ayrılmıştır?",
+    "beklenen_cevap": "7",
+    "ilgili_dosya": "turkiye_cografyasi.txt"
+  }
+]

@@ -1,0 +1,33 @@
+# Environment
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Vector store index (can be rebuilt)
+index/faiss_index/
+index/chroma_db/
+
+# Cache
+cache/query_cache.json
+
+# Logs
+logs/*.log
+
+# OS
+.DS_Store
+Thumbs.db
