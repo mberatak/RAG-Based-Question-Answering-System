@@ -62,6 +62,9 @@ class Config:
     # Vektör Veritabanı
     vector_db: str = "faiss"  # 'faiss' veya 'chroma'
 
+    # Chunk Stratejisi
+    chunk_strategy: str = "recursive"  # 'recursive' veya 'header'
+
     # Loglama
     log_level: str = "INFO"
 
@@ -88,6 +91,7 @@ class Config:
         self.chunk_overlap = int(os.getenv("CHUNK_OVERLAP", str(self.chunk_overlap)))
         self.top_k = int(os.getenv("TOP_K", str(self.top_k)))
         self.vector_db = os.getenv("VECTOR_DB", self.vector_db).lower()
+        self.chunk_strategy = os.getenv("CHUNK_STRATEGY", self.chunk_strategy).lower()
         self.log_level = os.getenv("LOG_LEVEL", self.log_level).upper()
 
         # Dizinleri oluştur
@@ -113,6 +117,11 @@ class Config:
             raise ValueError(
                 f"{Fore.RED}HATA: VECTOR_DB '{self.vector_db}' geçersiz. "
                 f"'faiss' veya 'chroma' olmalı.{Style.RESET_ALL}"
+            )
+        if self.chunk_strategy not in ("recursive", "header"):
+            raise ValueError(
+                f"{Fore.RED}HATA: CHUNK_STRATEGY '{self.chunk_strategy}' geçersiz. "
+                f"'recursive' veya 'header' olmalı.{Style.RESET_ALL}"
             )
         if self.chunk_size <= 0:
             raise ValueError("chunk_size pozitif bir sayı olmalıdır.")
