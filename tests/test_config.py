@@ -20,8 +20,8 @@ class TestConfig:
         """Varsayılan değerlerin doğru atandığını kontrol et."""
         with patch.dict(os.environ, {}, clear=True):
             cfg = Config()
-            assert cfg.embedding_model == "text-embedding-ada-002"
-            assert cfg.llm_model == "gpt-3.5-turbo"
+            assert cfg.embedding_model == "gemini-embedding-001"
+            assert cfg.llm_model == "gemini-2.5-flash"
             assert cfg.temperature == 0.3
             assert cfg.chunk_size == 1000
             assert cfg.chunk_overlap == 200
@@ -52,9 +52,9 @@ class TestConfig:
 
     def test_validate_no_api_key(self):
         """API anahtarı yoksa hata fırlatıldığını kontrol et."""
-        with patch.dict(os.environ, {"OPENAI_API_KEY": ""}, clear=False):
+        with patch.dict(os.environ, {"GEMINI_API_KEY": ""}, clear=False):
             cfg = Config()
-            cfg.openai_api_key = ""
+            cfg.gemini_api_key = ""
             with pytest.raises(ValueError):
                 cfg.validate()
 
@@ -77,7 +77,7 @@ class TestConfig:
     def test_validate_success(self):
         """Geçerli ayarlarla doğrulamanın başarılı olduğunu kontrol et."""
         cfg = Config()
-        cfg.openai_api_key = "sk-test-key-12345"
+        cfg.gemini_api_key = "AIzaSy..."
         assert cfg.validate() is True
 
     def test_directories_created(self, tmp_path):

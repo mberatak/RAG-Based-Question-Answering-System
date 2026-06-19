@@ -19,7 +19,7 @@ class TestDisplaySearchResults:
         """Boş sonuçların düzgün gösterildiğini kontrol et."""
         display_search_results([], search_type="semantic")
         captured = capsys.readouterr()
-        assert "Sonuç bulunamadı" in captured.out
+        assert "Sonuc bulunamadi" in captured.out
 
     def test_display_semantic_results(self, capsys):
         """Semantic arama sonuçlarının gösterildiğini kontrol et."""

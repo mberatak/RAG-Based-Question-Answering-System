@@ -25,8 +25,7 @@ class TestEmbeddingCost:
         total_tokens, cost = estimate_embedding_cost(chunks)
 
         assert total_tokens > 0
-        assert cost > 0
-        assert cost == pytest.approx(total_tokens / 1000 * 0.0001, abs=1e-8)
+        assert cost == 0.0
 
     def test_estimate_cost_empty(self):
         """Boş chunk listesinde sıfır maliyet döndüğünü kontrol et."""

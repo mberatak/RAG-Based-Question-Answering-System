@@ -46,10 +46,10 @@ class TestPromptTemplate:
         """Prompt template'in Türkçe talimatlar içerdiğini kontrol et."""
         from src.generator import PROMPT_TEMPLATE
 
-        assert "bağlam" in PROMPT_TEMPLATE.lower()
+        assert "baglam" in PROMPT_TEMPLATE.lower()
         assert "soru" in PROMPT_TEMPLATE.lower()
         assert "cevap" in PROMPT_TEMPLATE.lower()
-        assert "Türkçe" in PROMPT_TEMPLATE
+        assert "turkce" in PROMPT_TEMPLATE.lower()
 
     def test_prompt_template_has_variables(self):
         """Prompt template'in gerekli değişkenleri içerdiğini kontrol et."""
