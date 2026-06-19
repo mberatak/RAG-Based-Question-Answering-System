@@ -134,7 +134,7 @@ def display_search_results(
         search_type: Arama tipi ('semantic' veya 'hybrid').
     """
     print(f"\n{Fore.CYAN} Arama Sonuclari ({search_type.capitalize()}){Style.RESET_ALL}")
-    print(f"{'─' * 60}")
+    print(f"{'-' * 60}")
 
     if not results:
         print(f"  {Fore.YELLOW}Sonuc bulunamadi.{Style.RESET_ALL}")
@@ -156,7 +156,7 @@ def display_search_results(
         preview = doc.page_content[:200].replace("\n", " ").strip()
         print(f"  {preview}...")
 
-    print(f"\n{'─' * 60}")
+    print(f"\n{'-' * 60}")
 
 
 def get_retriever(

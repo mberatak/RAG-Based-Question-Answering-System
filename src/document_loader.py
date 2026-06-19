@@ -118,9 +118,9 @@ def load_documents(
             logger.error(f"Dosya yuklenemedi: {file_path.name} - Hata: {str(e)}")
             print(f"\n{Fore.RED} Hata: {file_path.name} - {str(e)}{Style.RESET_ALL}")
 
-    print(f"\n{Fore.GREEN}{'─' * 40}")
+    print(f"\n{Fore.GREEN}{'-' * 40}")
     print(f"  Yukleme Tamamlandi!")
-    print(f"{'─' * 40}{Style.RESET_ALL}")
+    print(f"{'-' * 40}{Style.RESET_ALL}")
     print(f"  Yuklenen dosya: {Fore.GREEN}{loaded_count}{Style.RESET_ALL}")
     print(f"  Toplam dokuman/sayfa: {Fore.GREEN}{len(all_documents)}{Style.RESET_ALL}")
     print(f"  Toplam karakter: {Fore.GREEN}{total_chars:,}{Style.RESET_ALL}")

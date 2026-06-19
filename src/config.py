@@ -5,7 +5,10 @@ Tüm uygulama ayarlarını merkezi olarak yönetir.
 """
 
 import os
+import sys
+import io
 import logging
+import builtins
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Optional
@@ -15,6 +18,38 @@ from colorama import init as colorama_init, Fore, Style
 
 # Colorama'yı başlat (Windows uyumluluğu için)
 colorama_init(autoreset=True)
+
+# --- Windows Encoding Protection System ---
+# Streamlit runs python code in threads and sometimes standard console streams
+# raise UnicodeEncodeError (charmap) when writing non-ASCII characters on Windows.
+# Global print function safety override
+_original_print = builtins.print
+
+def _safe_print(*args, **kwargs):
+    file = kwargs.get('file') or sys.stdout
+    encoding = getattr(file, 'encoding', None) or 'utf-8'
+    try:
+        import codecs
+        codecs.lookup(encoding)
+    except Exception:
+        encoding = 'utf-8'
+
+    new_args = []
+    for arg in args:
+        if isinstance(arg, str):
+            try:
+                new_args.append(arg.encode(encoding, errors='replace').decode(encoding))
+            except Exception:
+                new_args.append(arg)
+        else:
+            new_args.append(arg)
+    try:
+        _original_print(*new_args, **kwargs)
+    except Exception:
+        pass
+
+builtins.print = _safe_print
+# ------------------------------------------
 
 # Proje kök dizini
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
@@ -146,18 +181,18 @@ class Config:
 
 
 def setup_logging(config: "Config") -> logging.Logger:
-    """Loglama yapılandırmasını ayarla.
+    """Loglama yapilandirmasini ayarla."""
+    # Windows'ta stdout'u UTF-8'e zorla (charmap hatasini onler)
+    if hasattr(sys.stdout, 'reconfigure'):
+        try:
+            sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        except (AttributeError, io.UnsupportedOperation):
+            pass
 
-    Args:
-        config: Uygulama konfigürasyonu.
-
-    Returns:
-        logging.Logger: Yapılandırılmış logger nesnesi.
-    """
     logger = logging.getLogger("rag_system")
     logger.setLevel(getattr(logging, config.log_level, logging.INFO))
 
-    # Dosya handler'ı
+    # Dosya handler'i
     log_file = config.logs_dir / "app.log"
     file_handler = logging.FileHandler(log_file, encoding="utf-8")
     file_handler.setLevel(logging.DEBUG)
@@ -167,16 +202,43 @@ def setup_logging(config: "Config") -> logging.Logger:
     )
     file_handler.setFormatter(file_formatter)
 
-    # Konsol handler'ı
-    console_handler = logging.StreamHandler()
+    # Konsol handler'i — UTF-8 ve charmap korumali (Windows charmap sorununu onler)
+    try:
+        class SafeConsoleStream:
+            def __init__(self, stream):
+                self.stream = stream
+            def write(self, data):
+                try:
+                    self.stream.write(data)
+                except UnicodeEncodeError:
+                    encoding = getattr(self.stream, 'encoding', None) or 'utf-8'
+                    try:
+                        safe_data = data.encode(encoding, errors='replace').decode(encoding)
+                        self.stream.write(safe_data)
+                    except Exception:
+                        pass
+                except Exception:
+                    pass
+            def flush(self):
+                try:
+                    self.stream.flush()
+                except Exception:
+                    pass
+            def __getattr__(self, name):
+                return getattr(self.stream, name)
+
+        console_handler = logging.StreamHandler(SafeConsoleStream(sys.stdout))
+    except Exception:
+        console_handler = logging.StreamHandler(sys.stdout)
+
     console_handler.setLevel(getattr(logging, config.log_level, logging.INFO))
     console_formatter = logging.Formatter(
-        f"{Fore.GREEN}%(asctime)s{Style.RESET_ALL} - %(levelname)s - %(message)s",
+        "%(asctime)s - %(levelname)s - %(message)s",
         datefmt="%H:%M:%S",
     )
     console_handler.setFormatter(console_formatter)
 
-    # Mevcut handler'ları temizle ve yenilerini ekle
+    # Mevcut handler'lari temizle ve yenilerini ekle
     logger.handlers.clear()
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)

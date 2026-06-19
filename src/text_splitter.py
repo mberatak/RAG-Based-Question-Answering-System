@@ -150,9 +150,9 @@ def split_documents(
     total_chars = sum(len(c.page_content) for c in chunks)
     avg_chunk_size = total_chars / len(chunks) if chunks else 0
 
-    print(f"\n{Fore.GREEN}{'─' * 40}")
+    print(f"\n{Fore.GREEN}{'-' * 40}")
     print(f"  Metin Bolme Tamamlandi!")
-    print(f"{'─' * 40}{Style.RESET_ALL}")
+    print(f"{'-' * 40}{Style.RESET_ALL}")
     print(f"  Toplam parca sayisi: {Fore.GREEN}{len(chunks)}{Style.RESET_ALL}")
     print(f"  Ortalama parca boyutu: {Fore.GREEN}{avg_chunk_size:.0f}{Style.RESET_ALL} karakter")
     print(f"  Toplam karakter: {Fore.GREEN}{total_chars:,}{Style.RESET_ALL}")

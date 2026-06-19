@@ -111,7 +111,7 @@ def ask_question(
         Dict[str, Any]: Cevap, kaynaklar ve token bilgilerini iceren sozluk.
     """
     print(f"\n{Fore.CYAN} Soru:{Style.RESET_ALL} {question}")
-    print(f"{'─' * 60}")
+    print(f"{'-' * 60}")
 
     response = qa_chain.invoke({"query": question})
 
@@ -152,7 +152,7 @@ def ask_question(
         print(f"  Cevap: {completion_tokens:,} token")
         print(f"  Toplam: {total_tokens:,} token")
 
-    print(f"{'─' * 60}")
+    print(f"{'-' * 60}")
 
     result = {
         "answer": answer,
@@ -222,6 +222,6 @@ def ask_question_with_streaming(
         print(chunk, end="", flush=True)
         full_response += chunk
 
-    print(f"\n{'─' * 60}")
+    print(f"\n{'-' * 60}")
 
     return full_response
